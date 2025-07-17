@@ -465,6 +465,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 99;
     
     background-color: transparent;
     padding: 48px 0 29px 0;
@@ -598,4 +599,43 @@ header.scrolled {
 
 .faq-big-card-padding {
     padding: 47px 70px;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Custom Accordion */
+
+.custom-accordion {
+    border-top: 1px solid var(--opacity-light);
+}
+
+.custom-accordion.active .accordion-header .open-close-btn {
+    transform: rotate(90deg);
+}
+
+.custom-accordion.active .accordion-content {
+    grid-template-rows: 1fr;
+}
+
+.custom-accordion .accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    cursor: pointer;
+
+    .open-close-btn {
+        transform: rotate(0deg);
+        transition: .3s;
+    }
+}
+
+.custom-accordion .accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms;
+}
+
+.custom-accordion .content-hider {
+    overflow: hidden;
 }
