@@ -12,12 +12,22 @@ img {
     display: block;
 }
 
+.logo {
+    width: 218px;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 134px;
+    }
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Variable Colors */
 :root {
     /* Brand */
     --brand-primary: #5094F7;
-    --brand-primary-hover: #3b7ada;
+    --brand-primary-hover: #1e70eb;
 
     --brand-darker: #1D4782;
     --brand-darker-hover: #133668;
@@ -26,7 +36,7 @@ img {
     --brand-light-hover: #2e5a97;
     
     --brand-secondary: #F15942; 
-    --brand-secondary-hover: #cc3a23;
+    --brand-secondary-hover: #db2d12;
 
     /* Btn */
     --light-btn-bg: #FFFFFF;
@@ -195,6 +205,12 @@ h3 {
     font-weight: 600;
 }
 
+h3.smaller {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
 h3.bigger {
     font-size: 26px;
     line-height: 29px;
@@ -234,14 +250,14 @@ p {
 .btn-text {
     font-size: 15px;
     line-height: 15px;
-    letter-spacing: 4%;
+    letter-spacing: 1px;
     font-weight: 700;
 }
 
 .bigger-btn-text {
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 4%;
+    letter-spacing: 1px;
     font-weight: 700;
 }
 
@@ -250,6 +266,10 @@ p {
     line-height: 12px;
     letter-spacing: 2%;
     font-weight: 700;
+}
+
+button {
+    font-family: "Urbanist", sans-serif;
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -357,6 +377,10 @@ textarea::placeholder {
     background-color: var(--light-btn-bg-hover);
 }
 
+.custom-btn.brand-secondary-bg:hover {
+    background-color: var(--brand-secondary-hover);
+}
+
 .custom-btn:disabled {
     opacity: .5;
 }
@@ -400,6 +424,12 @@ textarea::placeholder {
     transform: translateY(.5px);
 }
 
+/* Square Card */
+.square-card {
+    border-radius: 12px;
+    box-shadow: 12px 12px 15px 0 rgba(0, 0, 0, 0.7);
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Header */
 
@@ -432,4 +462,11 @@ header.scrolled {
     width: 100%;
     height: 1px;
     display: block;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Hero */
+
+.hero {
+    padding-top: 206px;
 }
