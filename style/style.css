@@ -5,7 +5,7 @@
 }
 
 html, body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 img {
@@ -37,6 +37,7 @@ img {
     --secondary-text: #5F6168;
     --darker-text: #05131D;
     --light-text: #FFFFFF;
+    --opacity-light: #E8EAEB;
 
     /* Cases */
     --success: #2fd381;
@@ -61,6 +62,18 @@ img {
 
 .light-text {
     color: var(--light-text);
+}
+
+.brand-text {
+    color: var(--brand-primary);
+}
+
+.brand-darker-text {
+    color: var(--brand-darker);
+}
+
+.brand-light-text {
+    color: var(--brand-light);
 }
 
 .success-text {
@@ -100,32 +113,205 @@ img {
     background-color: var(--light-text);
 }
 
+.light-btn-bg {
+    background-color: var(--light-btn-bg);
+}
+
+.opacity-light {
+    background-color: var(--opacity-light);
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Fonts */
 
+/* Font-weights */
+/* regular */
 .fw-400 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400 !important;
+    font-style: normal;
 }
 
+/* medium */
 .fw-500 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500 !important;
+    font-style: normal;
 }
 
+/* semi-bold */
 .fw-600 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600 !important;
+    font-style: normal;
 }
 
+/* bold */
 .fw-700 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700 !important;
+    font-style: normal;
 }
+
+/* Font-tags */
+h1 {
+    font-size: 61px;
+    line-height: 64px;
+    letter-spacing: -4%;
+    font-weight: 600;
+}
+
+h1.smaller {
+    font-size: 52px;
+    line-height: 57px;
+    font-weight: 600;
+}
+
+h1.bigger {
+    font-size: 83px;
+    line-height: 112px;
+    letter-spacing: -2%;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 38px;
+    line-height: 42px;
+    font-weight: 400;
+}
+
+h2.bigger {
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
+}
+
+h3.bigger {
+    font-size: 26px;
+    line-height: 29px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
+}
+
+h3.bigger {
+    font-size: 26px;
+    line-height: 29px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 500;
+}
+
+.btn-text {
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 4%;
+    font-weight: 700;
+}
+
+.bigger-btn-text {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 4%;
+    font-weight: 700;
+}
+
+.smaller-btn-text {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 2%;
+    font-weight: 700;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Buttons */
+
+.rounded-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: none;
+    min-width: 125px;
+
+    color: var(--light-text);
+    transition: 
+        background-color .3s,
+        opacity .3s;
+}
+
+.no-bg-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.square-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+    border-radius: 9px;
+    border: none;
+    box-shadow: none;
+
+    transition: background-color .3s;
+}
+
+.custom-btn.brand-bg:hover {
+    background-color: var(--brand-primary-hover);
+}
+
+.custom-btn.brand-darker-bg:hover {
+    background-color: var(--brand-darker-hover);
+}
+
+.custom-btn.brand-light-bg:hover {
+    background-color: var(--brand-light-hover);
+}
+
+.custom-btn.light-btn-bg:hover {
+    background-color: var(--light-btn-bg-hover);
+}
+
+.custom-btn:disabled {
+    opacity: .5;
+}
+
 
 /* ------------------------------------------------------------------------------------ */
 /* Folder Card */
@@ -166,3 +352,35 @@ img {
 }
 
 /* ------------------------------------------------------------------------------------ */
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    background-color: transparent;
+    padding: 48px 0 29px 0;
+    width: 100%;
+    box-shadow: none;
+
+    transition: 
+        background-color .3s,
+        padding .3s,
+        box-shadow .3s;
+}
+
+header.scrolled {
+    background-color: var(--light-text);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.22);
+    padding: 16px 0;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Footer */
+
+.separator {
+    width: 100%;
+    height: 1px;
+    display: block;
+}
