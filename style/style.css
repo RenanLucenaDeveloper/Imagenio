@@ -10,6 +10,12 @@ html, body {
     overflow-x: hidden;
 }
 
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 img {
     display: block;
 }
@@ -239,6 +245,18 @@ p {
     font-size: 13px;
     line-height: 21px;
     font-weight: 500;
+}
+
+a {
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: underline;
 }
 
 .caption {
@@ -474,6 +492,14 @@ header.scrolled {
     display: block;
 }
 
+.social-media-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Hero */
 
@@ -561,4 +587,15 @@ header.scrolled {
 
 .img-doctor-female {
     max-width: 423px;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* FAQ */
+
+.faq-card-padding {
+    padding: 33px 40px;
+}
+
+.faq-big-card-padding {
+    padding: 47px 70px;
 }
