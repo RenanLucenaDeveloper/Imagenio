@@ -1,0 +1,168 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+    display: block;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Variable Colors */
+:root {
+    /* Brand */
+    --brand-primary: #5094F7;
+    --brand-primary-hover: #3b7ada;
+
+    --brand-darker: #1D4782;
+    --brand-darker-hover: #133668;
+
+    --brand-light: #1D4782;
+    --brand-light-hover: #2e5a97;
+    
+    --brand-secondary: #F15942; 
+    --brand-secondary-hover: #cc3a23;
+
+    /* Btn */
+    --light-btn-bg: #FFFFFF;
+    --light-btn-bg-hover: #c1d1eb;
+
+    /* Text */
+    --primary-text: #505A61;
+    --secondary-text: #5F6168;
+    --darker-text: #05131D;
+    --light-text: #FFFFFF;
+
+    /* Cases */
+    --success: #2fd381;
+    --danger: #D32F2F;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Color Classes */
+
+/* Text */
+.primary-text {
+    color: var(--primary-text);
+}
+
+.secondary-text {
+    color: var(--secondary-text);
+}
+
+.darker-text {
+    color: var(--darker-text);
+}
+
+.light-text {
+    color: var(--light-text);
+}
+
+.success-text {
+    color: var(--success-text);
+}
+
+.danger-text {
+    color: var(--danger-text);
+}
+
+/* Background colors */
+.brand-bg {
+    background-color: var(--brand-primary);
+}
+
+.brand-darker-bg {
+    background-color: var(--brand-darker);
+}
+
+.brand-light-bg {
+    background-color: var(--brand-light);
+}
+
+.brand-secondary-bg {
+    background-color: var(--brand-secondary);
+}
+
+.success-bg {
+    background-color: var(--success);
+}
+
+.danger-bg {
+    background-color: var(--danger);
+}
+
+.light-bg {
+    background-color: var(--light-text);
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Fonts */
+
+.fw-400 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fw-500 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.fw-600 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fw-700 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Folder Card */
+
+/* Card base */
+.card-fold {
+    position: relative;
+    width: 100%;
+    border-radius: 20px 0 20px 20px;
+    padding: 20px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.22);
+}
+
+/* Card detail container */
+.card-top-container {
+    width: 100%;
+    position: absolute;
+    top: -20px;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+/* Card detail right bar */
+.card-top-bar {
+    height: 19px;
+    width: 50%;
+    border-radius: 0 20px 0 0;
+}
+
+/* Middle connector of card detail */
+.folder-card-connection {
+    height: 20px;
+    width: 46px;
+    transform: translateY(.5px);
+}
+
+/* ------------------------------------------------------------------------------------ */
