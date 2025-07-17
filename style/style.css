@@ -510,3 +510,55 @@ header.scrolled {
     z-index: 9;
     transform: translateY(-50%);
 }
+
+/* ------------------------------------------------------------------------------------ */
+/* Custom Carroussel */
+
+.custom-carroussel-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.carroussel-card {
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
+
+    width: 32%;
+    min-width: 32%;
+    max-width: 32%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: 31px 56px 0 56px;
+}
+
+.carroussel-card .arrow {
+    width: 47px;
+}
+
+.carroussel-card h3 {
+    max-width: 220px;
+    padding-top: 39px;
+    padding-bottom: 8px;
+}
+
+@media screen and (max-width: 1400px) {
+    .carroussel-card {
+        height: 360px;
+        min-height: 360px;
+        max-height: 360px;
+    }
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Practicity */
+
+.img-doctor-female {
+    max-width: 423px;
+}
