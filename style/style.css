@@ -480,7 +480,7 @@ header {
 
 header.scrolled {
     background-color: var(--light-text);
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.10);
     padding: 16px 0;
 }
 
