@@ -30,7 +30,7 @@ img {
     width: 218px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .logo {
         width: 134px;
     }
@@ -292,6 +292,180 @@ button {
     font-family: "Urbanist", sans-serif;
 }
 
+@media screen and (max-width: 1400px) {
+    h1 {
+        font-size: 48px;
+        line-height: 54px;
+        letter-spacing: -4%;
+    }
+
+    h1.smaller {
+        font-size: 42px;
+        line-height: 48px;
+    }
+
+    h1.bigger {
+        font-size: 60px;
+        line-height: 72px;
+        letter-spacing: -2%;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    h2.bigger {
+        font-size: 34px;
+        line-height: 38px;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    h3.smaller {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    h3.bigger {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    h5 {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    a {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .caption {
+        font-size: 9px;
+        line-height: 10px;
+    }
+
+    .btn-text {
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.8px;
+    }
+
+    .bigger-btn-text {
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+    }
+
+    .smaller-btn-text {
+        font-size: 10px;
+        line-height: 10px;
+        letter-spacing: 1%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: -4%;
+    }
+
+    h1.smaller {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    h1.bigger {
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: -2%;
+    }
+
+    h2 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    h2.bigger {
+        font-size: 30px;
+        line-height: 33px;
+    }
+
+    h3 {
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+    h3.smaller {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    h3.bigger {
+        font-size: 26px;
+        line-height: 29px;
+    }
+
+    h4 {
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    h5 {
+        font-size: 6px;
+        line-height: 10px;
+    }
+
+    p {
+        font-size: 6px;
+        line-height: 10px;
+    }
+
+    a {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .caption {
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .btn-text {
+        font-size: 13px;
+        line-height: 13px;
+        letter-spacing: .7px;
+    }
+
+    .bigger-btn-text {
+        font-size: 10px;
+        line-height: 10px;
+        letter-spacing: .5px;
+    }
+
+    .smaller-btn-text {
+        font-size: 10px;
+        line-height: 10px;
+        letter-spacing: .5px;
+    }
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Form */
 
@@ -336,6 +510,9 @@ textarea::placeholder {
 
 .custom-input:invalid {
     outline: 1px solid var(--danger);
+}
+
+@media screen and (max-width: 1200px) {
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -405,6 +582,18 @@ textarea::placeholder {
     opacity: .5;
 }
 
+@media screen and (max-width: 1200px) {
+    .rounded-btn {
+        padding: 15px 17px;
+        border-radius: 100px;
+        min-width: 132px;
+    }
+
+    .square-btn {
+        padding: 5px;
+        border-radius: 7px;
+    }
+}
 
 /* ------------------------------------------------------------------------------------ */
 /* Folder Card */
@@ -460,6 +649,16 @@ textarea::placeholder {
     padding: 76px 58px;
 }
 
+@media screen and (max-width: 1200px) {
+    .big-square-card {
+        border-radius: 12px;
+    }
+
+    .big-square-padding {
+        padding: 43px 33px;
+    }
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Header */
 
@@ -486,6 +685,16 @@ header.scrolled {
     padding: 16px 0;
 }
 
+@media screen and (max-width: 1200px) {
+    header {
+        padding: 43px 0 25px 0;
+    }
+
+    header.scrolled {
+        padding: 14px 0;
+    }
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Footer */
 
@@ -503,6 +712,9 @@ header.scrolled {
     justify-content: center;
 }
 
+@media screen and (max-width: 1200px) {
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Hero */
 
@@ -511,17 +723,77 @@ header.scrolled {
     padding-bottom: 100px;
 }
 
+.hero h1 {
+    max-width: 580px;
+}
+
 .doctor-hero-img {
     max-width: 517px;
     transform: translate(40px, -24px);
 }
 
-.square-card-hero {
+.mobile-hero-cards {
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 9;
     transform: translate(-70px, 70px);
+}
+
+@media screen and (max-width: 1400px) {
+    .mobile-hero-cards {
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        z-index: 9;
+        transform: translate(-70px, 70px);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hero {
+        padding-top: 113px;
+        padding-bottom: 40px;
+    }
+
+    .hero h1 {
+        max-width: 300px;
+    }
+
+    .hero h1, .hero h3 {
+        text-align: center;
+        margin: auto;
+    }
+
+    .img-go-to {
+        width: 13px;
+    }
+
+    .image-doctor-container {
+        max-width: 516px;
+        margin: auto;
+    }
+
+    .doctor-hero-img {
+        transform: translate(30px, -24px);
+        max-width: unset;
+    }
+
+    .mobile-hero-cards {
+        top: 5%;
+        left: 0;
+        transform: none;
+    }
+
+    .square-card-hero {
+        bottom: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+
+    .square-card-hero img {
+        width: 20px;
+    }
 }
 
 
@@ -539,6 +811,10 @@ header.scrolled {
     z-index: 9;
     transform: translateY(-50%);
 }
+
+@media screen and (max-width: 1200px) {
+}
+
 
 /* ------------------------------------------------------------------------------------ */
 /* Custom Carroussel */
@@ -596,11 +872,17 @@ header.scrolled {
     }
 }
 
+@media screen and (max-width: 1200px) {
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Practicity */
 
 .img-doctor-female {
     max-width: 423px;
+}
+
+@media screen and (max-width: 1200px) {
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -612,6 +894,9 @@ header.scrolled {
 
 .faq-big-card-padding {
     padding: 47px 70px;
+}
+
+@media screen and (max-width: 1200px) {
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -651,4 +936,7 @@ header.scrolled {
 
 .custom-accordion .content-hider {
     overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
 }

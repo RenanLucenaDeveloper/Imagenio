@@ -24,7 +24,7 @@
                         <img src="img/svg/logo.svg" alt="Logo Imagenio" class="logo">
                     </button>
 
-                    <button class="custom-btn rounded-btn bigger-btn-text brand-darker-bg px-5 py-4">
+                    <button class="custom-btn rounded-btn bigger-btn-text brand-darker-bg px-xl-5 py-xl-4">
                         Teste Grátis
                     </button>
                 </nav>
@@ -36,13 +36,13 @@
 
     <section class="hero container" id="hero">
         <div class="row">
-            <div class="col-6">
-                <h1 class="brand-darker-text pb-3" style="max-width: 580px;">
+            <div class="col-12 col-xl-6">
+                <h1 class="brand-darker-text pb-3">
                     <span class="brand-text">Simplifique a Transferência de</span> 
                     Exames Médicos de Imagem
                 </h1>
 
-                <h3 class="primary-text smaller pt-2" style="max-width: 490px;">
+                <h3 class="primary-text smaller pt-2 d-none d-xl-block" style="max-width: 490px;">
                     A solução ideal para otimizar o 
                     compartilhamento de exames, garantir a 
                     segurança dos dados e melhorar o fluxo 
@@ -50,7 +50,7 @@
                     e simples de usar.
                 </h3>
 
-                <div class="d-flex align-items-center justify-content-start gap-4 pt-4">
+                <div class="d-none d-xl-flex align-items-center justify-content-start gap-4 pt-4">
                     <button class="custom-btn rounded-btn btn-text brand-bg px-3">
                         Planos e Preços
                     </button>
@@ -61,12 +61,12 @@
                         d-flex align-items-center justify-content-center
                         gap-2 px-3"
                     >
-                        <img src="img/svg/play.svg" alt="Ir para" width="16px">
+                        <img src="img/svg/play.svg" alt="Ir para" width="16px" class="img-go-to">
                         Como Funciona
                     </button>
                 </div>
 
-                <div class="d-flex align-items-center justify-content-start gap-4 pt-5">
+                <div class="d-none d-xl-flex align-items-center justify-content-start gap-4 pt-5">
 
                     <div class="d-flex align-items-center justify-content-start gap-4">
                         <div class="square-card" style="padding: 9px 12px;">
@@ -103,22 +103,75 @@
                 </div>
             </div>
 
-            <div class="col-6 d-flex align-items-start justify-content-end">
-                <div class="position-relative">
+            <div class="col-12 col-xl-6 d-flex flex-column flex-xl-row align-items-start justify-content-end">
+                <div class="position-relative image-doctor-container w-100 pt-4 pt-xl-0">
                     <img 
                       src="img/doctor-with-tablet.jpg" 
                       alt="Doutor com Tablet"
                       class="w-100 doctor-hero-img">
 
-                    <div class="light-bg big-square-card square-card-hero big-square-padding w-fit-content">
-                        <img src="img/svg/papers.svg" alt="Papéis" class="mb-4">
-                        <h3 class="primary-text">
-                            Otimize o dia a dia: <br>
-                            busca ágil e envio <br>
-                            de exames em <br>
-                            tempo real
-                        </h3>
+                    <div class="mobile-hero-cards d-flex flex-column align-items-start align-items-xl-end justify-content-start gap-3">
+                        <div class="w-100 light-bg py-2 square-card shadow-none d-flex d-xl-none align-items-center justify-content-start gap-3" style="max-width: 180px; padding-top: 10px; padding-bottom: 8px;">
+                            <img src="img/svg/three-points.svg" width="43px" alt="Porcentagem">
+
+                            <div style="max-width: 100px;">
+                                <h3 class="primary-text text-start m-0">
+                                    70% dos
+                                </h3>
+                                <p class="caption primary-text m-0">
+                                    hospitais Relatam dificuldades no compartilhamento de exames.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-100 light-bg square-card shadow-none d-flex d-xl-none align-items-center justify-content-start gap-3" style="max-width: 180px; padding-top: 10px; padding-bottom: 8px;">
+                            <img src="img/svg/backup-table.svg" width="43px" alt="Porcentagem">
+
+                            <div style="max-width: 110px;">
+                                <h3 class="primary-text text-start m-0">
+                                    Até 30%
+                                </h3>
+                                <p class="caption primary-text m-0">
+                                    Redução no tempo de execução de processos internos de hospitais
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="light-bg big-square-card square-card-hero big-square-padding w-fit-content">
+                            <img src="img/svg/papers.svg" alt="Papéis" class="mb-4">
+                            <h3 class="primary-text text-start">
+                                Otimize o dia a dia: <br>
+                                busca ágil e envio <br>
+                                de exames em <br>
+                                tempo real
+                            </h3>
+                        </div>
                     </div>
+                </div>
+
+                <h3 class="primary-text smaller pt-4 pb-2 d-block d-xl-none" style="max-width: 358px;">
+                    A solução ideal para otimizar o <br>
+                    compartilhamento de exames médicos, garantir <br>
+                    a segurança dos dados e melhorar o fluxo <br>
+                    operacional. Tudo isso com um sistema simples <br>
+                    e rápido de usar.
+                </h3>
+
+                <div class="d-flex d-xl-none flex-column align-items-center justify-content-start w-100 gap-3 pt-4">
+                    <button class="custom-btn rounded-btn btn-text brand-bg px-5">
+                        Planos e Preços
+                    </button>
+
+                    <button 
+                      class="
+                        custom-btn rounded-btn btn-text brand-secondary-bg 
+                        d-flex align-items-center justify-content-center
+                        gap-2"
+                      style="padding-left: 40px; padding-right: 40px;"
+                    >
+                        <img src="img/svg/play.svg" alt="Ir para" width="16px" class="img-go-to">
+                        Como Funciona
+                    </button>
                 </div>
             </div>
         </div>
