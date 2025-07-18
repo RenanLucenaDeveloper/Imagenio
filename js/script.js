@@ -15,7 +15,7 @@ function initHeaderEvents() {
     const header = document.querySelector('header');
 
     function handleScroll() {
-        const isScrolled = window.scrollY > 40;
+        const isScrolled = window.scrollY > 25;
 
         if(isScrolled) {
             header.classList.add('scrolled');

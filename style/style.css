@@ -1026,6 +1026,10 @@ header.scrolled {
     .mobile-faq-card-padding {
         padding: 16px;
     }
+
+    .faq-big-card-padding {
+        padding: 47px 33px;
+    }
 }
 
 /* ------------------------------------------------------------------------------------ */
