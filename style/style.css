@@ -552,6 +552,13 @@ header.scrolled {
     overflow-x: auto;
     behavior: smooth;
     scroll-behavior: smooth;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.custom-carroussel-container::-webkit-scrollbar {
+    display: none;
 }
 
 .carroussel-card {
