@@ -3,6 +3,7 @@
 function initApp() {
     initHeaderEvents();
     initAccordionEvents();
+    initCarrousselEvents();
 }
 initApp();
 
@@ -31,28 +32,6 @@ function initHeaderEvents() {
 // ===========================================================
 // Accordion
 
-// function initAccordionEvents() {
-//     const accordionsArray = document.querySelectorAll('.custom-accordion');
-
-//     accordionsArray.forEach((element) => {
-//         const accordionHeader = element.querySelector('.accordion-header')
-//         accordionHeader.addEventListener('click', handleAccordionClick)
-//     })
-    
-//     function handleAccordionClick(event) {
-//         if(event.target.classList.contains('custom-accordion')) {
-//             toggleAccordion(event.target)
-//             return
-//         }
-        
-//         handleAccordionClick(event.target.parentElement)
-//     }
-
-//     function toggleAccordion(element) {
-//         console.log(element)
-//     }
-// }
-
 function initAccordionEvents() {
     const accordionsArray = document.querySelectorAll('.custom-accordion');
 
@@ -73,5 +52,35 @@ function initAccordionEvents() {
 
     function toggleAccordion(element) {
         element.classList.toggle('active')
+    }
+}
+
+// ===========================================================
+// Carroussel
+
+function initCarrousselEvents() {
+    const carrousselContainer = document.querySelector('.custom-carroussel-container');
+    const backwardBtn = document.querySelector('[data-carroussel-btn-backward]');
+    const forwarddBtn = document.querySelector('[data-carroussel-btn-forward]');
+
+    backwardBtn.addEventListener('click', () => {
+        handleBtnClick(false)
+    })
+    forwarddBtn.addEventListener('click', () => {
+        handleBtnClick(true)
+    })
+
+    function handleBtnClick(positive) {
+        const scrollInPixels = getActualCardWidth() + 16;
+
+        carrousselContainer.scrollBy({
+            top: 0,
+            left: positive ? scrollInPixels : -scrollInPixels,
+            behavior: 'smooth'
+        })
+    }
+
+    function getActualCardWidth() {
+        return carrousselContainer.firstElementChild.clientWidth
     }
 }
