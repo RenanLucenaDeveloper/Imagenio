@@ -427,6 +427,11 @@ button {
         line-height: 10px;
     }
 
+    h4.bigger {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
     h5 {
         font-size: 6px;
         line-height: 10px;
@@ -1018,6 +1023,9 @@ header.scrolled {
 }
 
 @media screen and (max-width: 1200px) {
+    .mobile-faq-card-padding {
+        padding: 16px;
+    }
 }
 
 /* ------------------------------------------------------------------------------------ */
