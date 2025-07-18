@@ -939,9 +939,9 @@ header.scrolled {
 
 @media screen and (max-width: 992px) {
     .carroussel-card {
-        height: 360px;
-        min-height: 360px;
-        max-height: 360px;
+        height: 380px;
+        min-height: 380px;
+        max-height: 380px;
 
         width: 48%;
         min-width: 48%;
@@ -951,13 +951,13 @@ header.scrolled {
 
 @media screen and (max-width: 768px) {
     .carroussel-card {
-        height: 360px;
-        min-height: 360px;
-        max-height: 360px;
+        height: 420px;
+        min-height: 420px;
+        max-height: 420px;
 
-        width: 97%;
-        min-width: 97%;
-        max-width: 97%;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
     }
 }
 
