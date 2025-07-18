@@ -831,6 +831,11 @@ header.scrolled {
 /* ------------------------------------------------------------------------------------ */
 /* Por que a Imagenio? */
 
+.why-imagenio h1 {
+    max-width: 460px; 
+    transform: translateY(-12px);
+}
+
 .family-doctor-img {
     max-width: 926px;
 }
@@ -844,6 +849,32 @@ header.scrolled {
 }
 
 @media screen and (max-width: 1200px) {
+    .why-imagenio h1 {
+        max-width: unset; 
+        transform: none;
+    }
+
+    .square-card-why-imagenio {
+        top: 75%;
+        left: 0;
+        transform: none;
+
+        padding: 16px 25px !important;
+        min-width: 194px;
+        max-height: 150px;
+
+        transform: translateX(-20px);
+    }
+
+    .mobile-family-container {
+        max-width: 516px;
+        margin: auto;
+    }
+
+    .mobile-family-doctor-img {
+        display: block;
+        max-width: 516px;
+    }
 }
 
 
