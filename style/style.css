@@ -990,6 +990,19 @@ header.scrolled {
     max-width: 423px;
 }
 
+.mobile-practicity-cards {
+    position: absolute;
+    top: 42%;
+    right: 0;
+    max-width: 243px;
+
+    transform: translateX(30px);
+}
+
+.mobile-practicity-cards .square-card {
+    padding: 12px 30px;
+}
+
 @media screen and (max-width: 1200px) {
 }
 
