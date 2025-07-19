@@ -141,12 +141,18 @@ const submitBtn = document.getElementById('submitFormButton');
 inputs.forEach(input => {
   input.dataset.pristine = 'true';
 
-  input.addEventListener('input', () => {
+  input.addEventListener('input', function () {
+    if (this.value.trim() !== '') {
+      this.classList.add('has-value');
+    } else {
+      this.classList.remove('has-value');
+    }
+
     input.dataset.pristine = 'false';
     validateInputs();
   });
 
-  input.addEventListener('blur', () => {
+  input.addEventListener('blur', function () {
     input.dataset.pristine = 'false';
     validateInputs();
   });

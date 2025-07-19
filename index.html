@@ -913,15 +913,17 @@
                     </div>
 
                     <form class="m-0 p-0" id="send-info">
-                        <div class="w-100 d-flex flex-column flex-md-row gap-md-3">
+                        <div class="w-100 d-flex flex-column flex-md-row gap-md-5">
                             <div class="w-100">
                                 <div class="input-container">
                                     <input 
                                       class="custom-input" 
                                       type="text"
-                                      placeholder="Nome" 
                                       id="name" name="name" 
                                       required/>
+                                    <label class="floating-label" for="name">
+                                        Nome
+                                    </label>
                                     <img src="img/svg/error.svg" alt="Erro" class="error-svg">
                                 </div>
                                 <div class="error-message" id="error-name">
@@ -934,9 +936,11 @@
                                     <input 
                                       class="custom-input" 
                                       type="email"
-                                      placeholder="E-mail" 
                                       id="email" name="email" 
                                       required/>
+                                    <label class="floating-label" for="email">
+                                        E-mail
+                                    </label>
                                     <img src="img/svg/error.svg" alt="Erro" class="error-svg">
                                 </div>
                                 <div class="error-message" id="error-email">
@@ -945,15 +949,17 @@
                             </div>
                         </div>
 
-                        <div class="w-100 d-flex flex-column flex-md-row gap-md-3">
+                        <div class="w-100 d-flex flex-column flex-md-row gap-md-5">
                             <div class="w-100">
                                 <div class="input-container">
                                     <input 
                                       class="custom-input" 
                                       type="text"
-                                      placeholder="Empresa" 
                                       id="companyName" name="companyName" 
                                       required/>
+                                    <label class="floating-label" for="companyName">
+                                        Empresa
+                                    </label>
                                     <img src="img/svg/error.svg" alt="Erro" class="error-svg">
                                 </div>
                                 <div class="error-message" id="error-companyName">
@@ -966,9 +972,11 @@
                                     <input 
                                       class="custom-input" 
                                       type="text"
-                                      placeholder="Site" 
                                       id="website" name="website" 
                                       required/>
+                                    <label class="floating-label" for="website">
+                                        Site
+                                    </label>
                                     <img src="img/svg/error.svg" alt="Erro" class="error-svg">
                                 </div>
                                 <div class="error-message" id="error-website">
@@ -977,15 +985,17 @@
                             </div>
                         </div>
 
-                        <div class="w-100 d-flex flex-column flex-md-row gap-md-3">
+                        <div class="w-100 d-flex flex-column flex-md-row gap-md-5">
                             <div class="w-100">
                                 <div class="input-container">
                                     <input 
                                       class="custom-input" 
                                       type="tel"
-                                      placeholder="Telefone" 
                                       id="phone" name="phone" 
                                       required/>
+                                    <label class="floating-label" for="phone">
+                                        Telefone
+                                    </label>
                                     <img src="img/svg/error.svg" alt="Erro" class="error-svg">
                                 </div>
                                 <div class="error-message" id="error-phone">
@@ -1000,21 +1010,26 @@
                             <div class="w-100">
                                 <textarea 
                                   class="custom-input"
-                                  placeholder="Mensagem (obrigatório)"
                                   name="message" id="message"
                                   style="min-height: 115px;"
                                   required></textarea>
+                                <label class="floating-label" for="message">
+                                    Mensagem (obrigatório)
+                                </label>
                                 <div class="error-message" id="error-message">
                                     Este campo deve ser preenchido
                                 </div>
                             </div>
                         </div>
 
+                        <div class="separator opacity-light"></div>
+
                         <div class="d-flex align-items-center justify-content-center gap-4 pt-4">
                             <button 
                               type="button" 
                               onclick="closeModal('modal-send-info')"
-                              class="w-100 custom-btn rounded-btn btn-text brand-bg px-3">
+                              class="w-100 custom-btn rounded-btn btn-text brand-bg px-3"
+                              style="max-width: 125px;">
                                 Cancelar
                             </button>
 
@@ -1022,6 +1037,7 @@
                               type="submit" 
                               id="submitFormButton"
                               class="w-100 custom-btn rounded-btn btn-text brand-darker-bg px-3"
+                              style="max-width: 125px;"
                               disabled>
                                 Enviar
                             </button>
@@ -1112,16 +1128,6 @@
             </div>
         </div>
     </div>
-
-    <style>
-        .custom-input::placeholder {
-            opacity: 1;
-            color: var(--brand-primary) !important;
-            font-size: 14px;
-            line-height: 12px;
-            font-weight: 400;
-        }
-    </style>
 
     <script src="js/script.js"></script>
 </body>

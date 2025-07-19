@@ -519,17 +519,46 @@ button {
     position: relative;
 }
 
+.floating-label {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    color: var(--brand-primary);
+    
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 
+      top .3s,
+      transform .3s;
+}
+
+textarea + .floating-label {
+    top: 16px;
+    transform: none;
+}
+
+.has-value + .floating-label {
+    top: 6px;
+    transform: none;
+}
+
 .custom-input {
     border: .5px solid var(--input-bg);
     border-radius: 6px;
 
     color: var(--primary-text);
-    padding: 17px 12px;
-    font-size: 14px;
-    line-height: 12px;
+    padding: 16px 12px 4px 12px;
+    font-size: 16px;
+    line-height: 16px;
     font-weight: 600;
 
     width: 100%;
+}
+
+textarea {
+    padding-top: 22px !important;
 }
 
 .custom-input::placeholder {
@@ -575,6 +604,7 @@ textarea::placeholder {
     font-size: 12px;
     font-weight: 500;
     color: var(--danger);
+    padding: 2px 0;
 }
 
 @media screen and (max-width: 1200px) {
