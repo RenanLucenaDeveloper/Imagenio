@@ -595,7 +595,7 @@ textarea::placeholder {
     opacity: 0;
 }
 
-.custom-input.error + .error-svg {
+.custom-input.error + .floating-label + .error-svg {
     opacity: 1;
 }
 
