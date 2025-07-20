@@ -150,16 +150,16 @@
                     </div>
                 </div>
 
-                <h3 class="primary-text smaller pt-4 pb-2 d-block d-xl-none" style="max-width: 358px;">
-                    A solução ideal para otimizar o <br>
-                    compartilhamento de exames médicos, garantir <br>
-                    a segurança dos dados e melhorar o fluxo <br>
-                    operacional. Tudo isso com um sistema simples <br>
+                <h3 class="primary-text smaller pt-5 pb-2 d-block d-xl-none" style="max-width: 355px;">
+                    A solução ideal para otimizar o
+                    compartilhamento de exames médicos, garantir
+                    a segurança dos dados e melhorar o fluxo
+                    operacional. Tudo isso com um sistema simples
                     e rápido de usar.
                 </h3>
 
-                <div class="d-flex d-xl-none flex-column align-items-center justify-content-start w-100 gap-3 pt-4">
-                    <button class="custom-btn rounded-btn btn-text brand-bg px-5">
+                <div class="d-flex d-xl-none align-items-center justify-content-center w-100 gap-3 pt-4">
+                    <button class="custom-btn rounded-btn btn-text brand-bg px-4">
                         Planos e Preços
                     </button>
 
@@ -169,7 +169,6 @@
                         custom-btn rounded-btn btn-text brand-secondary-bg 
                         d-flex align-items-center justify-content-center
                         gap-2"
-                      style="padding-left: 40px; padding-right: 40px;"
                     >
                         <img src="img/svg/play.svg" alt="Ir para" width="16px" class="img-go-to">
                         Como Funciona
@@ -185,7 +184,7 @@
         <div class="row">
             <div class="col-12 pb-4 d-flex flex-column-reverse flex-xl-row align-items-center justify-content-between gap-5">
                 <div class="mobile-cards-fast-transfer d-flex flex-column flex-xl-row align-items-center justify-content-start gap-4 w-100">
-                    <div class="w-100 card-fold light-bg p-0 mb-3 mb-xl-0">
+                    <div class="w-100 card-fold light-bg p-0 mb-3 mb-xl-0"  style="max-width: 324px;">
                         <div class="card-top-container">
                             <img src="img/svg/light-folder-card-connection.svg" class="folder-card-connection" alt="folder-card-connection" width="46px" height="20px">
                             <div class="card-top-bar light-bg" style="transform: translateY(1px);"></div>
@@ -209,7 +208,7 @@
                         </div>
                     </div>
     
-                    <div class="w-100 card-fold brand-bg p-0">
+                    <div class="w-100 card-fold brand-bg p-0" style="max-width: 324px;">
                         <div class="card-top-container">
                             <img src="img/svg/brand-folder-card-connection.svg" class="folder-card-connection" alt="folder-card-connection" width="46px" height="20px">
                             <div class="card-top-bar brand-bg"></div>
@@ -487,7 +486,7 @@
                     </div>
                 </div>
     
-                <div class="col-5 d-flex justify-content-end justify-content-xxl-center">
+                <div class="col-5 d-flex justify-content-end">
                     <img src="img/doctor-female.jpg" alt="Imagem consulta doutora" class="w-100 img-doctor-female">
                 </div>
             </div>
@@ -519,7 +518,7 @@
                                     Seguro
                                 </h3>
             
-                                <p class="primary-text caption">
+                                <p class="primary-text caption m-0">
                                     Elimine os CDs do seu fluxo de trabalho e envie exames em segundos. Modernize-se com uma solução ágil, segura e de alta performance na nuvem
                                 </p>
                             </div>
@@ -530,7 +529,7 @@
                                     Simples e Econômica
                                 </h3>
             
-                                <p class="primary-text caption">
+                                <p class="primary-text caption m-0">
                                     Em minutos, sua equipe estará pronta para usar a plataforma — sem complicações, sem curva de aprendizado e com resultados imediatos.
                                 </p>
                             </div>
@@ -829,7 +828,7 @@
                     </ul>
                 </div>
 
-                <ul class="pt-3 pt-lg-0 w-100 d-flex align-items-center justify-content-center justify-content-lg-end gap-1 gap-sm-2 gap-lg-4">
+                <ul class="pt-3 pt-lg-0 w-100 d-flex align-items-center justify-content-center justify-content-lg-end gap-2 gap-lg-4">
                     <li>
                         <a class="brand-darker-text">Políticas de Privacidade</a>
                     </li>
@@ -839,7 +838,7 @@
                     <li onclick="scrollToElement('#faq')">
                         <a class="brand-darker-text">FAQ</a>
                     </li>
-                    <li onclick="openModal('modal-youtube-video')">
+                    <li class="d-none d-sm-none" onclick="openModal('modal-youtube-video')">
                         <a class="brand-darker-text">Como Funciona</a>
                     </li>
                 </ul>
@@ -850,7 +849,7 @@
             </div>
 
             <div class="col-12 d-flex align-items-center justify-content-between pb-5">
-                <p class="brand-darker-text text-center text-lg-start bigger fw-600">
+                <p class="brand-darker-text text-center text-lg-start bigger fw-600 w-100">
                     © 2026 copyright Imagenio. Todos os direitos reservados.
                 </p>
 
@@ -903,8 +902,8 @@
                         </h3>
 
                         <button
-                          onclick="closeModal('modal-send-info')"
-                          class="d-none d-sm-block no-bg-btn" 
+                          class="d-none d-sm-block no-bg-btn"
+                          onclick="closeSendInfoModal('')"
                           title="Fechar" 
                           style="transform: translate(0, -15px);"
                           >
@@ -956,7 +955,7 @@
                                       class="custom-input" 
                                       type="text"
                                       id="companyName" name="companyName" 
-                                      required/>
+                                      />
                                     <label class="floating-label" for="companyName">
                                         Empresa
                                     </label>
@@ -973,7 +972,7 @@
                                       class="custom-input" 
                                       type="text"
                                       id="website" name="website" 
-                                      required/>
+                                      />
                                     <label class="floating-label" for="website">
                                         Site
                                     </label>
@@ -992,7 +991,7 @@
                                       class="custom-input" 
                                       type="tel"
                                       id="phone" name="phone" 
-                                      required/>
+                                      />
                                     <label class="floating-label" for="phone">
                                         Telefone
                                     </label>
@@ -1012,6 +1011,7 @@
                                   class="custom-input"
                                   name="message" id="message"
                                   style="min-height: 115px;"
+                                  maxlength="1000"
                                   required></textarea>
                                 <label class="floating-label" for="message">
                                     Mensagem (obrigatório)
@@ -1027,7 +1027,7 @@
                         <div class="d-flex align-items-center justify-content-center gap-4 pt-4">
                             <button 
                               type="button" 
-                              onclick="closeModal('modal-send-info')"
+                              onclick="closeSendInfoModal()"
                               class="w-100 custom-btn rounded-btn btn-text brand-bg px-3"
                               style="max-width: 125px;">
                                 Cancelar
@@ -1099,14 +1099,11 @@
                     <div class="card-top-bar light-bg" style="transform: translateY(1px);"></div>
                 </div>
 
-                <div class="p-4 pe-3 pt-2">
+                <div class="p-2">
                     <div class="w-100 d-flex justify-content-between align-items-center pb-4">
-                        <h3 class="mid brand-darker-text m-0">
-                            Dados para contato
-                        </h3>
-
+                        <div></div>
                         <button
-                          onclick="closeModal('modal-send-info')"
+                          onclick="closeModal('modal-youtube-video')"
                           class="d-none d-sm-block no-bg-btn" 
                           title="Fechar" 
                           style="transform: translate(0, -15px);"

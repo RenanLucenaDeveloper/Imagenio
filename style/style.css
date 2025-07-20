@@ -281,7 +281,7 @@ a {
     cursor: pointer;
     font-size: 17px;
     line-height: 24px;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -456,7 +456,7 @@ button {
     }
 
     h4 {
-        font-size: 8px;
+        font-size: 10px;
         line-height: 10px;
     }
 
@@ -471,7 +471,7 @@ button {
     }
 
     p {
-        font-size: 6px;
+        font-size: 8px;
         line-height: 10px;
     }
 
@@ -520,7 +520,7 @@ button {
 }
 
 .floating-label {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 12px;
     font-weight: 400;
     color: var(--brand-primary);
@@ -541,6 +541,7 @@ textarea + .floating-label {
 
 .has-value + .floating-label, .custom-input:focus + .floating-label {
     top: 6px;
+    font-size: 12px;
     transform: none;
 }
 
@@ -827,8 +828,8 @@ header.scrolled {
 }
 
 .doctor-hero-img {
-    max-width: 517px;
-    transform: translate(40px, -24px);
+    max-width: 560px;
+    transform: translate(125px, -24px);
 }
 
 .mobile-hero-cards {
@@ -846,6 +847,11 @@ header.scrolled {
         left: 50px;
         z-index: 9;
         transform: translate(-70px, 70px);
+    }
+
+    .doctor-hero-img {
+        max-width: 517px;
+        transform: translate(80px, -24px);
     }
 }
 
@@ -1088,7 +1094,7 @@ header.scrolled {
 /* Practicity */
 
 .img-doctor-female {
-    max-width: 423px;
+    max-width: 460px;
 }
 
 .mobile-practicity-cards {
@@ -1104,7 +1110,16 @@ header.scrolled {
     padding: 12px 30px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
+    .img-doctor-female {
+        max-width: 423px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-practicity-cards {
+        top: 38%;
+    }
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -1175,6 +1190,7 @@ header.scrolled {
 
 .backdrop-modal {
     background-color: rgba(0, 0, 0, .5);
+    overflow-y: auto;
 
     position: fixed;
     top: 0;
@@ -1192,7 +1208,7 @@ header.scrolled {
     align-items: center;
     justify-content: center;
 
-    padding: 16px;
+    padding: 100px 16px 16px 16px;
 
     animation-name: fade-in;
     animation-duration: .4s;
@@ -1214,16 +1230,16 @@ header.scrolled {
 /* Iframe */
 
 .video-container {
-position: relative;
-width: 100%;
-padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
 }
 
 .video-container iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }

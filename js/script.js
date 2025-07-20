@@ -106,17 +106,18 @@ function openModal(elementSelector) {
 function handleClickOutside(event) {
     if(event.target.classList.contains('backdrop-modal')) {
         closeModal(currentElementSelector);
+        currentElementSelector = null
     }
 }
 
 function closeModal(elementSelector) {
     const element = document.querySelector(`[data-${elementSelector}]`)
-    
     backdropModal.removeEventListener('click', handleClickOutside)
     
     backdropModal.classList.add('d-none')
     element.classList.add('d-none')
 }
+
 
 // ===========================================================
 // Scroll to
@@ -130,7 +131,7 @@ function scrollToElement(elementSelector) {
 // Form
 
 const form = document.getElementById('send-info');
-const inputs = form.querySelectorAll('input, textarea');
+const inputs = form.querySelectorAll('input[required], textarea[required]');
 
 const phoneInput = document.getElementById('phone');
 const phonePattern = /^\(\d{2}\)\d{5}-\d{4}$/;
@@ -158,7 +159,13 @@ inputs.forEach(input => {
   });
 });
 
-phoneInput.addEventListener('input', () => {
+phoneInput.addEventListener('input', (event) => {
+  console.log(event.inpuType)
+  if(event.inputType == 'deleteContentBackward') {
+    phoneInput.value = phoneInput.value.slice(0, -1);
+    return
+  }
+
   let value = phoneInput.value.replace(/\D/g, '');
 
   if (value.length > 11) value = value.slice(0, 11);
@@ -225,3 +232,8 @@ form.addEventListener('submit', function (e) {
     });
   }
 });
+
+function closeSendInfoModal() {
+    form.reset();
+    closeModal('modal-send-info')
+}
