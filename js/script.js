@@ -105,8 +105,10 @@ function openModal(elementSelector) {
 
 function handleClickOutside(event) {
     if(event.target.classList.contains('backdrop-modal')) {
-        closeModal(currentElementSelector);
-        currentElementSelector = null
+        if(currentElementSelector === 'modal-send-info')
+          closeSendInfoModal();
+        else
+          closeModal(currentElementSelector);
     }
 }
 
@@ -116,6 +118,7 @@ function closeModal(elementSelector) {
     
     backdropModal.classList.add('d-none')
     element.classList.add('d-none')
+    currentElementSelector = null
 }
 
 
@@ -131,24 +134,28 @@ function scrollToElement(elementSelector) {
 // Form
 
 const form = document.getElementById('send-info');
-const inputs = form.querySelectorAll('input[required], textarea[required]');
+const inputs = form.querySelectorAll('input, textarea');
+const requiredInputs = form.querySelectorAll('input[required], textarea[required]');
 
 const phoneInput = document.getElementById('phone');
 const phonePattern = /^\(\d{2}\)\d{5}-\d{4}$/;
 
 const submitBtn = document.getElementById('submitFormButton');
 
-// Marcar campos como "tocados"
 inputs.forEach(input => {
-  input.dataset.pristine = 'true';
-
   input.addEventListener('input', function () {
     if (this.value.trim() !== '') {
       this.classList.add('has-value');
     } else {
       this.classList.remove('has-value');
     }
+  });
+});
 
+requiredInputs.forEach(input => {
+  input.dataset.pristine = 'true';
+
+  input.addEventListener('input', function () {
     input.dataset.pristine = 'false';
     validateInputs();
   });
@@ -160,7 +167,6 @@ inputs.forEach(input => {
 });
 
 phoneInput.addEventListener('input', (event) => {
-  console.log(event.inpuType)
   if(event.inputType == 'deleteContentBackward') {
     phoneInput.value = phoneInput.value.slice(0, -1);
     return
@@ -185,7 +191,7 @@ phoneInput.addEventListener('input', (event) => {
 function validateInputs() {
   let valid = true;
 
-  inputs.forEach(input => {
+  requiredInputs.forEach(input => {
     const errorMsg = document.getElementById(`error-${input.name}`);
     const isTouched = input.dataset.pristine === 'false';
     const value = input.value.trim();
@@ -219,8 +225,8 @@ form.addEventListener('submit', function (e) {
   validateInputs();
 
   if (!submitBtn.disabled) {
-    closeModal('modal-send-info');
-    openModal('modal-confirmation')
+    // closeModal('modal-send-info');
+    transitionToConfirmation()
     form.reset();
     submitBtn.disabled = true;
 
@@ -235,5 +241,12 @@ form.addEventListener('submit', function (e) {
 
 function closeSendInfoModal() {
     form.reset();
+    const modal = document.querySelector('[data-modal-send-info]');
+    modal.classList.remove('turned-into-confirmation')
     closeModal('modal-send-info')
+}
+
+function transitionToConfirmation() {
+  const modal = document.querySelector('[data-modal-send-info]');
+  modal.classList.add('turned-into-confirmation')
 }

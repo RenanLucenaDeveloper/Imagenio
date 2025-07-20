@@ -53,6 +53,11 @@ img {
     animation-fill-mode: forwards;
 }
 
+.delay-animation {
+    opacity: 0;
+    animation-delay: .2s;
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Variable Colors */
 :root {
@@ -523,6 +528,7 @@ button {
     font-size: 14px;
     line-height: 12px;
     font-weight: 400;
+    letter-spacing: .5px;
     color: var(--brand-primary);
     
     position: absolute;
@@ -554,6 +560,7 @@ textarea + .floating-label {
     font-size: 16px;
     line-height: 16px;
     font-weight: 600;
+    letter-spacing: .5px;
 
     width: 100%;
 }
@@ -707,8 +714,9 @@ textarea::placeholder {
 .card-top-container {
     width: 100%;
     position: absolute;
-    top: -20px;
+    top: -19px;
     right: 0;
+    z-index: 4;
 
     display: flex;
     align-items: center;
@@ -729,6 +737,23 @@ textarea::placeholder {
     transform: translateY(.5px);
 }
 
+.card-fold.light-bg {
+    position: relative;
+    z-index: 3;
+}
+
+.card-fold.light-bg::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    z-index: 2;
+    display: block;
+    width: 55%;
+    height: 15px;
+    box-shadow: 0 -18px 30px 0 rgba(0, 0, 0, .1);
+}
+
 /* Square Card */
 .square-card {
     border-radius: 12px;
@@ -746,10 +771,6 @@ textarea::placeholder {
 }
 
 @media screen and (max-width: 1200px) {
-    .card-top-bar {
-        transform: translateY(1px);
-    }
-
     .big-square-card {
         border-radius: 12px;
     }
@@ -909,6 +930,17 @@ header.scrolled {
     min-width: 395px;
 }
 
+.imagine-text {
+    min-width: 400px;
+    max-width: 400px;
+}
+
+@media screen and (max-width: 1400px) {
+    .imagine-text {
+        max-width: 384px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .fast-transfer h2 {
         min-width: unset;
@@ -1023,6 +1055,10 @@ header.scrolled {
 }
 
 .arrow-btn {
+    position: unset;
+}
+
+.arrow-btn img {
     width: 72px;
 }
 
@@ -1035,17 +1071,18 @@ header.scrolled {
 }
 
 @media screen and (max-width: 1200px) {
+    .carroussel-card {
+        width: 48%;
+        min-width: 48%;
+        max-width: 48%;
+    }
 }
 
 @media screen and (max-width: 992px) {
     .carroussel-card {
-        height: 380px;
-        min-height: 380px;
-        max-height: 380px;
-
-        width: 48%;
-        min-width: 48%;
-        max-width: 48%;
+        height: 340px;
+        min-height: 340px;
+        max-height: 340px;
     }
 
     .arrow-btn {
@@ -1055,9 +1092,9 @@ header.scrolled {
 
 @media screen and (max-width: 768px) {
     .carroussel-card {
-        height: 420px;
-        min-height: 420px;
-        max-height: 420px;
+        height: 315px;
+        min-height: 315px;
+        max-height: 315px;
 
         padding-right: 43px;
         padding-left: 43px;
@@ -1065,6 +1102,12 @@ header.scrolled {
         width: 100%;
         min-width: 100%;
         max-width: 100%;
+    }
+
+    .arrow-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
@@ -1224,6 +1267,40 @@ header.scrolled {
     animation-duration: .4s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+
+    transition: 
+      width .4s,
+      max-width .4s;
+}
+
+.modal-container-div[data-modal-send-info] .brand, 
+.modal-container-div[data-modal-send-info] .confirmation-content {
+    display: none;
+}
+
+.modal-container-div[data-modal-send-info] .card-fold {
+    background-color: var(--light-text);
+}
+
+.modal-container-div.turned-into-confirmation[data-modal-send-info] .brand,
+.modal-container-div.turned-into-confirmation[data-modal-send-info] .confirmation-content
+ {
+    display: flex;
+}
+
+.modal-container-div.turned-into-confirmation[data-modal-send-info] .send-info-content,
+.modal-container-div.turned-into-confirmation[data-modal-send-info] .light
+ {
+    display: none;
+}
+
+
+.modal-container-div.turned-into-confirmation[data-modal-send-info] .card-fold {
+    background-color: var(--brand-primary);
+}
+
+.turned-into-confirmation {
+    max-width: 700px;
 }
 
 /* ------------------------------------------------------------------------------------ */
