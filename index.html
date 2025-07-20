@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Urbanist:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&family=Poppins:wght@400;500;600;700&family=Urbanist:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -457,7 +457,7 @@
             <div class="row pt-5">
                 <div class="col pt-2">
                     <h1 class="brand-darker-text smaller" style="max-width: 820px; transform: translateY(25px);">
-                        Praticidade e Agilidade na 
+                        Praticidade e Agilidade na <br>
                         <span class="brand-text">Transferência de Exames.</span>
                     </h1>
                 </div>
@@ -909,12 +909,11 @@
                         </h3>
 
                         <button
-                          class="d-none d-sm-block no-bg-btn"
+                          class="d-block no-bg-btn ps-3 btn-close-modal-form"
                           onclick="closeSendInfoModal('')"
                           title="Fechar" 
-                          style="transform: translate(0, -15px);"
                           >
-                            <img src="img/svg/close-modal.svg" alt="Fechar" width="26px">
+                            <img src="img/svg/close-modal.svg" alt="Fechar" width="20px">
                         </button>
                     </div>
 
@@ -1086,74 +1085,23 @@
 
         <!-- ===================================================== -->
         <!-- ===================================================== -->
-        <!-- CONFIRMATION -->
-        <div data-modal-confirmation class="d-none modal-container-div">
-            <div class="w-100 card-fold brand-bg">
-                <div class="card-top-container brand">
-                    <img src="img/svg/brand-folder-card-connection.svg" class="folder-card-connection" alt="folder-card-connection" width="46px" height="20px">
-                    <div class="card-top-bar brand-bg"></div>
-                </div>
-
-                <div class="card-top-container light">
-                    <img src="img/svg/light-folder-card-connection.svg" class="folder-card-connection" alt="folder-card-connection" width="46px" height="20px">
-                    <div class="card-top-bar light-bg"></div>
-                </div>
-
-                <div class="confirmation-content p-4 pe-3 pt-2 pb-0">
-                    <div class="d-flex align-items-center gap-5">
-                        <img src="img/confirmation.png" alt="Confirmação" class="w-100 d-none d-md-block" style="max-width: 272px;">
-
-                        <div>
-                            <div class="w-100 d-flex justify-content-end align-items-center pb-4">
-                                <img src="img/svg/white-logo.svg" alt="Logo" width="198px" style="transform: translate(0, -15px);">
-                            </div>
-
-                            <h2 class="bigger light-text mb-4 pb-1">
-                                ESTAMOS<br class="d-none d-md-block">
-                                QUASE LÁ!
-                            </h2>
-
-                            <h4 class="light-text bigger fw-500 mb-3 pb-3">
-                                Nossa equipe entrará em contato em breve para ativar seu teste gratuito e garantir que você tenha a melhor experiência possível.
-                            </h4>
-
-                            <div class="w-100 d-flex justify-content-end align-items-center pb-4">
-                                <button 
-                                  type="button" 
-                                  onclick="closeModal('modal-confirmation')"
-                                  class="custom-btn rounded-btn btn-text light-bg brand-text px-3">
-                                    Ok
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ===================================================== -->
-        <!-- ===================================================== -->
         <!-- YOUTUBE VIDEO -->
         <div data-modal-youtube-video class="d-none modal-container-div">
             <div class="w-100 card-fold light-bg">
+                <button
+                    onclick="closeModal('modal-youtube-video')"
+                    class="d-block no-bg-btn position-absolute close-video-btn" 
+                    title="Fechar" 
+                    >
+                    <img src="img/svg/close-modal.svg" alt="Fechar" width="20px">
+                </button>
+
                 <div class="card-top-container">
                     <img src="img/svg/light-folder-card-connection.svg" class="folder-card-connection" alt="folder-card-connection" width="46px" height="20px">
                     <div class="card-top-bar light-bg"></div>
                 </div>
 
-                <div class="p-2">
-                    <div class="w-100 d-flex justify-content-between align-items-center">
-                        <div></div>
-                        <button
-                          onclick="closeModal('modal-youtube-video')"
-                          class="d-block no-bg-btn" 
-                          title="Fechar" 
-                          style="transform: translate(0, -25px);"
-                          >
-                            <img src="img/svg/close-modal.svg" alt="Fechar" width="26px">
-                        </button>
-                    </div>
-
+                <div class="p-md-2">
                     <div class="video-container">
                         <iframe
                             src="https://www.youtube.com/embed/u31qwQUeGuM?si=JVSRYHjncKWrVhva"

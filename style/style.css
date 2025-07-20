@@ -93,6 +93,10 @@ img {
     --danger: #D32F2F;
 }
 
+.body {
+    background-color: #e5e7ec;
+}
+
 /* ------------------------------------------------------------------------------------ */
 /* Color Classes */
 
@@ -561,6 +565,7 @@ textarea + .floating-label {
     line-height: 16px;
     font-weight: 600;
     letter-spacing: .5px;
+    font-family: "Inter", sans-serif;
 
     width: 100%;
 }
@@ -745,13 +750,14 @@ textarea::placeholder {
 .card-fold.light-bg::before {
     content: "";
     position: absolute;
-    top: -15px;
+    top: -5px;
     right: 0px;
     z-index: 2;
+    border-radius: 100px 100px 0 0;
     display: block;
-    width: 55%;
+    width: 60%;
     height: 15px;
-    box-shadow: 0 -18px 30px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 -18px 13px 0 rgba(0, 0, 0, .04);
 }
 
 /* Square Card */
@@ -770,6 +776,21 @@ textarea::placeholder {
     padding: 76px 58px;
 }
 
+[data-modal-youtube-video] .card-fold {
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.close-video-btn {
+    right: 25px; 
+    top: 5px; 
+    z-index: 9;
+}
+
+btn-close-modal-form {
+    transform: translate(0, -15px);
+}
+
 @media screen and (max-width: 1200px) {
     .big-square-card {
         border-radius: 12px;
@@ -778,6 +799,24 @@ textarea::placeholder {
     .big-square-padding {
         padding: 43px 33px;
     }
+}
+
+@media screen and (max-width: 576px) {
+    [data-modal-youtube-video] .card-fold {
+        padding: 10px;
+        padding-top: 30px;
+    }
+
+    .close-video-btn {
+        right: 10px; 
+        top: -5px; 
+        z-index: 9;
+    }
+
+    btn-close-modal-form {
+        transform: none;
+    }
+
 }
 
 /* ------------------------------------------------------------------------------------ */
@@ -1269,6 +1308,7 @@ header.scrolled {
     animation-fill-mode: forwards;
 
     transition: 
+      height .4s,
       width .4s,
       max-width .4s;
 }
