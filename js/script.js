@@ -140,6 +140,10 @@ const requiredInputs = form.querySelectorAll('input[required], textarea[required
 const phoneInput = document.getElementById('phone');
 const phonePattern = /^\(\d{2}\)\d{5}-\d{4}$/;
 
+const emailInput = document.getElementById('email');
+const emailError = document.getElementById('error-email');
+const emailPattern = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
+
 const submitBtn = document.getElementById('submitFormButton');
 let isSubmitting = false;
 
@@ -189,6 +193,16 @@ phoneInput.addEventListener('input', (event) => {
   phoneInput.value = formatted;
 });
 
+emailInput.addEventListener('invalid', function (event) {
+  event.preventDefault();
+  if (emailInput.validity.typeMismatch) {
+    console.log('chegou')
+    emailInput.setCustomValidity("Digite um e-mail válido, como exemplo@dominio.com.");
+  } else {
+    emailInput.setCustomValidity("");
+  }
+});
+
 function validateInputs() {
   let valid = true;
 
@@ -201,8 +215,12 @@ function validateInputs() {
 
     if (!value) {
       campoValido = false;
+      emailError.textContent = "Este campo precisa ser preenchido"
     } else if (input.name === 'phone' && !phonePattern.test(value)) {
       campoValido = false;
+    } else if (input.name === 'email' && !emailPattern.test(value)) {
+      campoValido = false;
+      emailError.textContent = "Insira um e-mail válido"
     }
 
     if (!campoValido) {
