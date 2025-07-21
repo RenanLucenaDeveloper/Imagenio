@@ -141,6 +141,7 @@ const phoneInput = document.getElementById('phone');
 const phonePattern = /^\(\d{2}\)\d{5}-\d{4}$/;
 
 const submitBtn = document.getElementById('submitFormButton');
+let isSubmitting = false;
 
 inputs.forEach(input => {
   input.addEventListener('input', function () {
@@ -221,11 +222,57 @@ function validateInputs() {
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
+  if(isSubmitting) return
+
   inputs.forEach(input => input.dataset.pristine = 'false');
   validateInputs();
 
   if (!submitBtn.disabled) {
-    // closeModal('modal-send-info');
+    handleFormSubmit()
+  }
+});
+
+async function handleFormSubmit() {
+  try {
+    isSubmitting = true
+    let name = form.elements['name'].value;
+    let email = form.elements['email'].value;
+    let company = form.elements['companyName'].value;
+    let website = form.elements['website'].value;
+    let phone = form.elements['phone'].value;
+    let message = form.elements['message'].value;
+
+    let body = {name, email, company, website, phone, message};
+
+    let response;
+    let json;
+
+    response = await fetch("https://61u981rsk4.execute-api.us-east-1.amazonaws.com/Production/SendEmailBrevo", {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+
+    json = await response.json();
+
+    if(response.ok === false) {
+      throw new Error(json.message);
+    }
+    
+    resetForm();
+  } 
+  catch(error) {
+    json = null
+    console.log(error.message)
+  }
+  finally {
+    isSubmitting = false
+  }
+}
+
+function resetForm() {
     transitionToConfirmation()
     form.reset();
     submitBtn.disabled = true;
@@ -236,8 +283,7 @@ form.addEventListener('submit', function (e) {
       input.classList.remove('error');
       errorMsg.style.opacity = '0';
     });
-  }
-});
+}
 
 function closeSendInfoModal() {
     form.reset();

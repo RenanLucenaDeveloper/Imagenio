@@ -559,11 +559,11 @@ textarea + .floating-label {
     border: .5px solid var(--input-bg);
     border-radius: 6px;
 
-    color: var(--primary-text);
+    color: var(--brand-darker);
     padding: 16px 12px 4px 12px;
     font-size: 16px;
     line-height: 16px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .5px;
     font-family: "Inter", sans-serif;
 
@@ -847,7 +847,7 @@ header.scrolled {
 
 @media screen and (max-width: 1200px) {
     header {
-        padding: 43px 0 25px 0;
+        padding: 25px 0 25px 0;
     }
 
     header.scrolled {
@@ -917,7 +917,7 @@ header.scrolled {
 
 @media screen and (max-width: 1200px) {
     .hero {
-        padding-top: 113px;
+        padding-top: 100px;
         padding-bottom: 40px;
     }
 
