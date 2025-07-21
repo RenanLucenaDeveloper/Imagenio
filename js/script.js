@@ -268,7 +268,7 @@ async function handleFormSubmit() {
     response = await fetch("https://61u981rsk4.execute-api.us-east-1.amazonaws.com/Production/SendEmailBrevo", {
       method: "POST",
       headers: {
-        'Content-type': 'application/json'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(body)
     })
