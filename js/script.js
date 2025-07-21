@@ -242,7 +242,7 @@ async function handleFormSubmit() {
     let phone = form.elements['phone'].value;
     let message = form.elements['message'].value;
 
-    let body = {name, email, company, website, phone, message};
+    let body = {name, email, company, website, message};
 
     let response;
     let json;
