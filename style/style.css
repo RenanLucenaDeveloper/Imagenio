@@ -83,6 +83,7 @@ img {
     --secondary-text: #5F6168;
     --darker-text: #05131D;
     --light-text: #FFFFFF;
+    --secondary-light-text: #FFFFFF;
     --opacity-light: #E8EAEB;
 
     /* Form */
@@ -115,6 +116,10 @@ img {
 
 .light-text {
     color: var(--light-text);
+}
+
+.secondary-light-text {
+    color: var(--secondary-light-text);
 }
 
 .brand-text {
@@ -329,6 +334,10 @@ button {
     font-family: "Urbanist", sans-serif;
 }
 
+.plus-jakarta {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
 @media screen and (max-width: 1400px) {
     h1 {
         font-size: 48px;
@@ -469,6 +478,11 @@ button {
         line-height: 10px;
     }
 
+    h4.medium {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
     h4.bigger {
         font-size: 16px;
         line-height: 24px;
@@ -497,6 +511,11 @@ button {
     .caption {
         font-size: 9px;
         line-height: 12px;
+    }
+
+    .caption.smaller {
+        font-size: 7px;
+        line-height: 8px;
     }
 
     .btn-text {
@@ -641,6 +660,23 @@ textarea::placeholder {
     transition: 
         background-color .3s,
         opacity .3s;
+}
+
+.outline-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid var(--light-btn-bg);
+    box-shadow: none;
+
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+
+    color: var(--light-text);
 }
 
 .no-bg-btn {
@@ -1048,18 +1084,31 @@ header.scrolled {
 /* ------------------------------------------------------------------------------------ */
 /* Custom Carroussel */
 
-.custom-carroussel-container {
+.custom-carroussel-container, .custom-carroussel-transform-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 16px;
 
     overflow-x: auto;
+    overflow-y: hidden;
     behavior: smooth;
     scroll-behavior: smooth;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+
+.custom-carroussel-transform-container {
+    gap: 24px;
+}
+
+.custom-carroussel-transform-container.mensal-selected .anual {
+    display: none !important;
+}
+
+.custom-carroussel-transform-container.anual-selected .mensal {
+    display: none !important;
 }
 
 .custom-carroussel-container::-webkit-scrollbar {
@@ -1101,6 +1150,45 @@ header.scrolled {
     width: 72px;
 }
 
+.arrow-btn-second {
+    background-color: var(--light-btn-bg);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #C9DEFB;
+    width: 44px !important;
+    min-width: 44px !important;
+    height: 44px;
+}
+
+.arrow-btn-second img {
+    width: 32px;
+}
+
+.carroussel-box-bg {
+    background-color: #F1F5F9;
+    border-radius: 20px;
+}
+
+.transform-card {
+    box-shadow: 0px 0.9px 2.71px 0px rgba(0, 0, 0, 0.14) !important;
+    height: unset !important;
+    min-height: unset !important;
+    max-height: unset !important;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.transform-card button {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+.plus-card {
+    background: linear-gradient(180deg, #5095FA 0%, #1D4782 100%) !important;
+}
+
 @media screen and (max-width: 1400px) {
     .carroussel-card {
         height: 360px;
@@ -1124,8 +1212,18 @@ header.scrolled {
         max-height: 340px;
     }
 
+    .transform-card {
+        width: 60%;
+        min-width: 60%;
+        max-width: 60%;
+    }
+
     .arrow-btn {
         width: 50px;
+    }
+
+    .carroussel-box-bg {
+        background-color: transparent;
     }
 }
 
@@ -1147,6 +1245,16 @@ header.scrolled {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    .transform-card {
+        width: 99%;
+        min-width: 99%;
+        max-width: 99%;
+    }
+
+    .custom-carroussel-transform-container {
+        gap: 16px;
     }
 }
 
@@ -1201,6 +1309,126 @@ header.scrolled {
 @media screen and (max-width: 768px) {
     .mobile-practicity-cards {
         top: 38%;
+    }
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* Practicity */
+
+#transform-the-way {
+    background: linear-gradient(180deg, #F7F9FC 100%, #939496 100%);
+}
+
+#transform-the-way h4.medium {
+    font-weight: 400 !important;
+    max-width: 797px;
+}
+
+#transform-the-way h4.medium span {
+    font-weight: 600 !important;
+}
+
+#transform-the-way h4.medium span.only-sm-bold {
+    font-weight: 400 !important;
+}
+
+.btn-selectors {
+    background-color: var(--light-btn-bg);
+    padding: 4.5px 5px;
+    border-radius: 100px;
+    box-shadow: 0px 0.9px 0.9px 0px #12142026;
+    max-height: 42px !important;
+}
+
+.btn-selectors-pre-container {
+    transform: translateX(100px);
+}
+
+.btn-selectors button {
+    background-color: transparent;
+    color: var(--secondary-text);
+    
+    border: none;
+    box-shadow: none;
+    border-radius: 100px;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+
+    padding: 10px 25px;
+    max-height: 33px !important;
+    
+    transition: 
+      .3s background-color,
+      .3s color;
+}
+
+.btn-selectors button.selected {
+    color: var(--light-text);
+    background-color: var(--brand-darker);
+}
+
+.save-percentage {
+    width: 150px;
+    position: relative;
+}
+
+.save-percentage .caption {
+    top: 28px;
+    right: 14px;
+}
+
+@media screen and (max-width: 1400px) {
+    #transform-the-way h4.medium {
+        font-weight: 500 !important;
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #transform-the-way h4.medium {
+        font-weight: 500 !important;
+        max-width: 600px;
+    }
+
+    .btn-selectors {
+        padding: 3.5px;
+        max-height: 31px !important;
+    }
+
+    .btn-selectors-pre-container {
+        transform: none;
+    }
+    
+    .btn-selectors button {
+        max-height: 24px !important;
+        padding: 7px 17px;
+    }
+
+    .save-percentage {
+        width: 112px;
+    }
+
+    .save-percentage .caption {
+        top: 20px;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #transform-the-way {
+        background: transparent;
+    }
+
+    #transform-the-way h4.medium {
+        font-weight: 500 !important;
+        max-width: 359px;
+    }
+
+    #transform-the-way h4.medium span {
+        font-weight: 700 !important;
+    }
+
+    #transform-the-way h4.medium span.only-sm-bold {
+        font-weight: 700 !important;
     }
 }
 

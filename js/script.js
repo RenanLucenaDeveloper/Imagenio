@@ -3,7 +3,8 @@
 function initApp() {
     initHeaderEvents();
     initAccordionEvents();
-    initCarrousselEvents();
+    initCarrousselReduceEvents();
+    initCarrousselTransformEvents();
 }
 initApp();
 
@@ -56,12 +57,42 @@ function initAccordionEvents() {
 }
 
 // ===========================================================
-// Carroussel
+// Carroussel Reduce Cost
 
-function initCarrousselEvents() {
+function initCarrousselReduceEvents() {
     const carrousselContainer = document.querySelector('.custom-carroussel-container');
     const backwardBtn = document.querySelector('[data-carroussel-btn-backward]');
     const forwarddBtn = document.querySelector('[data-carroussel-btn-forward]');
+
+    backwardBtn.addEventListener('click', () => {
+        handleBtnClick(false)
+    })
+    forwarddBtn.addEventListener('click', () => {
+        handleBtnClick(true)
+    })
+
+    function handleBtnClick(positive) {
+        const scrollInPixels = getActualCardWidth() + 16;
+
+        carrousselContainer.scrollBy({
+            top: 0,
+            left: positive ? scrollInPixels : -scrollInPixels,
+            behavior: 'smooth'
+        })
+    }
+
+    function getActualCardWidth() {
+        return carrousselContainer.firstElementChild.clientWidth
+    }
+}
+
+// ===========================================================
+// Carroussel Transform The Way
+
+function initCarrousselTransformEvents() {
+    const carrousselContainer = document.querySelector('.custom-carroussel-transform-container');
+    const backwardBtn = document.querySelector('[data-carroussel-transform-btn-backward]');
+    const forwarddBtn = document.querySelector('[data-carroussel-transform-btn-forward]');
 
     backwardBtn.addEventListener('click', () => {
         handleBtnClick(false)
@@ -304,7 +335,7 @@ function resetForm() {
 }
 
 function closeSendInfoModal() {
-    form.reset();
+    resetForm()
     const modal = document.querySelector('[data-modal-send-info]');
     modal.classList.remove('turned-into-confirmation')
     closeModal('modal-send-info')
@@ -313,4 +344,31 @@ function closeSendInfoModal() {
 function transitionToConfirmation() {
   const modal = document.querySelector('[data-modal-send-info]');
   modal.classList.add('turned-into-confirmation')
+}
+
+// ===========================================================
+// Plans Toggle
+
+let selectedPlan = 'mensal';
+const containerElement = document.querySelector('.custom-carroussel-transform-container');
+
+function changePlan(plan) {
+  if(plan === selectedPlan) {
+    return
+  }
+
+  selectedPlan = plan
+  containerElement.classList.remove(`${getOposite(plan)}-selected`)
+  containerElement.classList.add(`${plan}-selected`)
+
+  const planBtn = document.querySelector(`.${getOposite(plan)}-btn`);
+  const opositeBtn = document.querySelector(`.${plan}-btn`);
+
+  planBtn.classList.remove('selected');
+  opositeBtn.classList.add('selected');
+}
+
+function getOposite(plan) {
+  if(plan === 'mensal') return 'anual'
+  return 'mensal'
 }

@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&family=Poppins:wght@400;500;600;700&family=Urbanist:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&family=Plus+Jakarta+Sans:wght@200..800&family=Poppins:wght@400;500;600;700&family=Urbanist&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -342,6 +342,7 @@
                     Ambiente
                 </h1>
             </div>
+
             <div class="col-12 col-xl-5 d-flex align-items-center justify-content-center">
                 <div>
                     <h3 class="primary-text smaller image-h3 text-center text-xl-end pt-2" style="max-width: 490px;">
@@ -574,7 +575,211 @@
 
     <!-- ===================================================== -->
 
-    <section class="container pt-5 pt-xl-5" id="faq">
+    <section class="w-100 mt-5 pb-5" id="transform-the-way">
+        <div class="container pt-4 pt-md-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="brand-darker-text text-center smaller">
+                        Transforme a forma <br class="d-block d-md-none">como sua clínica ou <br>hospital <span class="brand-text">compartilha <br class="d-block d-md-none">exames de imagem</span>
+                    </h1>
+                    <h4 class="medium secondary-text text-center w-100 mx-auto mt-3 mt-lg-4 mb-2">
+                        Reduza burocracias, otimize o tempo de atendimento e ofereça uma experiência superior para seus pacientes e parceiros. <br class="d-block d-md-none">
+                        <span class="only-sm-bold">Comece agora mesmo!</span><br class="d-none d-md-block">
+                        <span>Escolha o plano ideal para sua instituição.</span>
+                    </h4>
+                </div>
+
+                <div class="col-12 pt-2 pt-xl-3">
+                    <div class="btn-selectors-pre-container d-flex align-items-end justify-content-center mx-auto">
+                        <div class="d-flex btn-selectors gap-2">
+                            <button onclick="changePlan('mensal')" class="selected smaller-btn-text mensal-btn">
+                                Mensal
+                            </button>
+                            <button onclick="changePlan('anual')" class="smaller-btn-text anual-btn">
+                                Anual
+                            </button>
+                        </div>
+                        <div class="save-percentage">
+                            <img src="img/svg/save-percentage-bg.svg" alt="Save" class="d-block w-100">
+                            <p class="caption light-text text-center smaller position-absolute">
+                                Economize <br><span class="d-none d-xl-inline-block">até</span> 17%
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row pt-4 mt-3">
+                <div class="col">
+                    <div class="carroussel-box-bg w-100 px-4 d-flex align-items-center justify-content-between position-relative">
+                        <button data-carroussel-transform-btn-backward class="arrow-btn arrow-btn-second no-bg-btn p-0" style="left: 0;" title="Anterior">
+                            <img src="img/svg/arrow-back.svg" alt="Anterior" class="d-block">
+                        </button>
+        
+                        <div class="py-4 custom-carroussel-transform-container mensal-selected w-100">
+                            <div class="carroussel-card light-bg big-square-card transform-card">
+                                <img src="img/svg/essencial.svg" alt="icon" width="38px" class="pb-4">
+
+                                <h3 class="plus-jakarta darker-text p-0 mb-1 smaller fw-600">
+                                    Essencial
+                                </h3>
+        
+                                <h5 class="plus-jakarta secondary-text bigger fw-400">
+                                    Para pequenas demandas
+                                </h5>
+
+                                <div class="separator mt-2 mb-3" style="background-color: #E8EAF1; min-height: 1px;"></div>
+
+                                <ul class="p-0 pb-4 m-0 d-flex flex-column gap-3 align-items-start justify-content-start">
+                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">100 créditos / mês</h5>
+                                    </li>
+                                    <li class="mensal p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">Até 5 exames por transferência</h5>
+                                    </li>
+                                    <li class="anual p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">Até 10 exames por transferência</h5>
+                                    </li>
+                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">Atendimento personalizado</h5>
+                                    </li>
+                                    <li class="mensal p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">R$ 2,99 por transferência</h5>
+                                    </li>
+                                    <li class="anual p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">R$ 2,49 por transferência</h5>
+                                    </li>
+                                </ul>
+
+                                <button class="mensal plus-jakarta fw-700 rounded-btn custom-btn brand-darker-bg mx-auto mt-2">
+                                    R$ 299,00
+                                </button>
+                                <button class="anual plus-jakarta fw-700 rounded-btn custom-btn brand-darker-bg mx-auto mt-2">
+                                    R$ 249,00
+                                </button>
+                            </div>
+                            
+                            <div class="carroussel-card plus-card light-bg big-square-card transform-card">
+                                <div class="w-100 d-flex align-items-center justify-content-between gap-3 gap-md-5 gap-lg-4 pb-4">
+                                    <img src="img/svg/plus.svg" alt="icon" width="41px">
+
+                                    <div class="outline-btn plus-jakarta w-100">
+                                        Mais vendido!
+                                    </div>
+                                </div>
+
+                                <h3 class="plus-jakarta light-text p-0 mb-1 smaller fw-600">
+                                    Plus
+                                </h3>
+        
+                                <h5 class="plus-jakarta secondary-light-text bigger fw-400">
+                                    Para uso moderado
+                                </h5>
+
+                                <div class="separator mt-2 mb-3" style="background-color: #E8EAF1; min-height: 1px;"></div>
+
+                                <ul class="p-0 pb-4 m-0 d-flex flex-column gap-3 align-items-start justify-content-start">
+                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta light-text">250 créditos / mês</h5>
+                                    </li>
+                                    <li class="mensal p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta light-text">Até 5 exames por transferência</h5>
+                                    </li>
+                                    <li class="anual p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta light-text">Até 10 exames por transferência</h5>
+                                    </li>
+                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta light-text">Atendimento personalizado</h5>
+                                    </li>
+                                    <li class="mensal p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta light-text">R$ 2,79 por transferência</h5>
+                                    </li>
+                                    <li class="anual p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta light-text">R$ 2,35 por transferência</h5>
+                                    </li>
+                                </ul>
+
+                                <button class="mensal plus-jakarta fw-700 rounded-btn custom-btn brand-bg mx-auto mt-2">
+                                    R$ 697,50
+                                </button>
+                                <button class="anual plus-jakarta fw-700 rounded-btn custom-btn brand-bg mx-auto mt-2">
+                                    R$ 587,50
+                                </button>
+                            </div>
+
+                            <div class="carroussel-card light-bg big-square-card transform-card">
+                                <img src="img/svg/pro.svg" alt="icon" width="45px" class="pb-4">
+
+                                <h3 class="plus-jakarta darker-text p-0 mb-1 smaller fw-600">
+                                    Pro
+                                </h3>
+        
+                                <h5 class="plus-jakarta secondary-text bigger fw-400">
+                                    Para uso frequente
+                                </h5>
+
+                                <div class="separator mt-2 mb-3" style="background-color: #E8EAF1; min-height: 1px;"></div>
+
+                                <ul class="p-0 pb-4 m-0 d-flex flex-column gap-3 align-items-start justify-content-start">
+                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">500 créditos / mês</h5>
+                                    </li>
+                                    <li class="mensal p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">Até 5 exames por transferência</h5>
+                                    </li>
+                                    <li class="anual p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">Até 10 exames por transferência</h5>
+                                    </li>
+                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">Atendimento personalizado</h5>
+                                    </li>
+                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">R$ 2,65 por transferência</h5>
+                                    </li>
+                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">R$ 2,20 por transferência</h5>
+                                    </li>
+                                </ul>
+
+                                <button class="mensal plus-jakarta fw-700 rounded-btn custom-btn brand-darker-bg mx-auto mt-2">
+                                    R$ 1.325,00
+                                </button>
+                                <button class="anual plus-jakarta fw-700 rounded-btn custom-btn brand-darker-bg mx-auto mt-2">
+                                    R$ 1.100,00
+                                </button>
+                            </div>
+                        </div>
+        
+                        <button data-carroussel-transform-btn-forward class="arrow-btn arrow-btn-second no-bg-btn p-0" style="right: 0;" title="Próximo">
+                            <img src="img/svg/arrow-next.svg" alt="Próximo" class="d-block">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================== -->
+
+    <section class="container pt-3" id="faq">
         <div class="row pt-0 pt-xl-5">
             <div class="col pt-4">
                 <h1 class="brand-darker-text text-center w-100 smaller">
