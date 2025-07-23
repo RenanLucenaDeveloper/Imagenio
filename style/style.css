@@ -1103,14 +1103,6 @@ header.scrolled {
     gap: 24px;
 }
 
-.custom-carroussel-transform-container.mensal-selected .anual {
-    display: none !important;
-}
-
-.custom-carroussel-transform-container.anual-selected .mensal {
-    display: none !important;
-}
-
 .custom-carroussel-container::-webkit-scrollbar {
     display: none;
 }
@@ -1167,8 +1159,24 @@ header.scrolled {
 }
 
 .carroussel-box-bg {
-    background-color: #F1F5F9;
+    transition: .3s background-color;
     border-radius: 20px;
+}
+
+.carroussel-box-bg.mensal-selected {
+    background-color: #F1F5F9;
+}
+
+.carroussel-box-bg.anual-selected {
+    background: #F99D1F14;
+}
+
+.carroussel-box-bg.mensal-selected .anual {
+    display: none !important;
+}
+
+.carroussel-box-bg.anual-selected .mensal {
+    display: none !important;
 }
 
 .transform-card {

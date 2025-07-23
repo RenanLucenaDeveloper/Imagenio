@@ -51,7 +51,7 @@
                 </h3>
 
                 <div class="d-none d-xl-flex align-items-center justify-content-start gap-4 pt-4">
-                    <button class="custom-btn rounded-btn btn-text brand-bg px-3">
+                    <button class="custom-btn rounded-btn btn-text brand-bg px-3" onclick="scrollToElement('#transform-the-way')">
                         Planos e Preços
                     </button>
 
@@ -159,7 +159,7 @@
                 </h3>
 
                 <div class="d-flex d-xl-none align-items-center justify-content-center w-100 gap-3 pt-4">
-                    <button class="custom-btn rounded-btn btn-text brand-bg px-4">
+                    <button class="custom-btn rounded-btn btn-text brand-bg px-4" onclick="scrollToElement('#transform-the-way')">
                         Planos e Preços
                     </button>
 
@@ -319,7 +319,7 @@
                 </p>
 
                 <div class="d-flex d-xl-none align-items-center justify-content-center gap-3 pt-3">
-                    <button class="custom-btn rounded-btn btn-text brand-bg px-4">
+                    <button class="custom-btn rounded-btn btn-text brand-bg px-4" onclick="scrollToElement('#transform-the-way')">
                         Planos e Preços
                     </button>
     
@@ -350,7 +350,7 @@
                     </h3>
         
                     <div class="d-none d-xl-flex align-items-center justify-content-start gap-4 pt-4">
-                        <button class="custom-btn rounded-btn btn-text brand-bg px-4">
+                        <button class="custom-btn rounded-btn btn-text brand-bg px-4" onclick="scrollToElement('#transform-the-way')">
                             Planos e Preços
                         </button>
         
@@ -611,12 +611,12 @@
     
             <div class="row pt-4 mt-3">
                 <div class="col">
-                    <div class="carroussel-box-bg w-100 px-4 d-flex align-items-center justify-content-between position-relative">
+                    <div class="carroussel-box-bg mensal-selected w-100 px-4 d-flex align-items-center justify-content-between position-relative">
                         <button data-carroussel-transform-btn-backward class="arrow-btn arrow-btn-second no-bg-btn p-0" style="left: 0;" title="Anterior">
                             <img src="img/svg/arrow-back.svg" alt="Anterior" class="d-block">
                         </button>
         
-                        <div class="py-4 custom-carroussel-transform-container mensal-selected w-100">
+                        <div class="py-4 custom-carroussel-transform-container w-100">
                             <div class="carroussel-card light-bg big-square-card transform-card">
                                 <img src="img/svg/essencial.svg" alt="icon" width="38px" class="pb-4">
 
@@ -749,11 +749,11 @@
                                         <img src="img/svg/circle.svg" alt="circle" width="15px">
                                         <h5 class="m-0 plus-jakarta secondary-text">Atendimento personalizado</h5>
                                     </li>
-                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                    <li class="mensal p-0 m-0 d-flex align-items-center justify-content-start gap-2">
                                         <img src="img/svg/circle.svg" alt="circle" width="15px">
                                         <h5 class="m-0 plus-jakarta secondary-text">R$ 2,65 por transferência</h5>
                                     </li>
-                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                    <li class="anual p-0 m-0 d-flex align-items-center justify-content-start gap-2">
                                         <img src="img/svg/circle.svg" alt="circle" width="15px">
                                         <h5 class="m-0 plus-jakarta secondary-text">R$ 2,20 por transferência</h5>
                                     </li>
@@ -761,6 +761,54 @@
 
                                 <button class="mensal plus-jakarta fw-700 rounded-btn custom-btn brand-darker-bg mx-auto mt-2">
                                     R$ 1.325,00
+                                </button>
+                                <button class="anual plus-jakarta fw-700 rounded-btn custom-btn brand-darker-bg mx-auto mt-2">
+                                    R$ 1.100,00
+                                </button>
+                            </div>
+
+                            <div class="carroussel-card light-bg big-square-card transform-card">
+                                <img src="img/svg/premium.svg" alt="icon" width="36px" class="pb-4 pt-1">
+
+                                <h3 class="plus-jakarta darker-text p-0 mb-1 smaller fw-600">
+                                    Premium
+                                </h3>
+        
+                                <h5 class="plus-jakarta secondary-text bigger fw-400">
+                                    Para altas demandas
+                                </h5>
+
+                                <div class="separator mt-2 mb-3" style="background-color: #E8EAF1; min-height: 1px;"></div>
+
+                                <ul class="p-0 pb-4 m-0 d-flex flex-column gap-3 align-items-start justify-content-start">
+                                    <li class="mensal p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">1000 créditos</h5>
+                                    </li>
+                                    <li class="anual p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">1000 créditos / mês</h5>
+                                    </li>
+                                    <li class="mensal p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">Até 5 exames por transferência</h5>
+                                    </li>
+                                    <li class="anual p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">Até 10 exames por transferência</h5>
+                                    </li>
+                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">Suporte por e-mail</h5>
+                                    </li>
+                                    <li class="p-0 m-0 d-flex align-items-center justify-content-start gap-2">
+                                        <img src="img/svg/circle.svg" alt="circle" width="15px">
+                                        <h5 class="m-0 plus-jakarta secondary-text">R$ 2,09 por crédito adicional</h5>
+                                    </li>
+                                </ul>
+
+                                <button class="mensal plus-jakarta fw-700 rounded-btn custom-btn brand-darker-bg mx-auto mt-2">
+                                    R$ 2.090,00
                                 </button>
                                 <button class="anual plus-jakarta fw-700 rounded-btn custom-btn brand-darker-bg mx-auto mt-2">
                                     R$ 1.100,00

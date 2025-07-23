@@ -350,7 +350,7 @@ function transitionToConfirmation() {
 // Plans Toggle
 
 let selectedPlan = 'mensal';
-const containerElement = document.querySelector('.custom-carroussel-transform-container');
+const containerElement = document.querySelector('.carroussel-box-bg');
 
 function changePlan(plan) {
   if(plan === selectedPlan) {
