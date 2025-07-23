@@ -92,6 +92,10 @@ img {
     /* Cases */
     --success: #2fd381;
     --danger: #D32F2F;
+
+    /* Card PLUS anual e mensal */
+    --anual-plus-card: linear-gradient(180deg, #5095FA 0%, #1D4782 100%);
+    --mensal-plus-card: linear-gradient(180deg, #5095FA 0%, #1D4782 100%);
 }
 
 .body {
@@ -336,6 +340,10 @@ button {
 
 .plus-jakarta {
     font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+.cursor-normal {
+    cursor: default !important;
 }
 
 @media screen and (max-width: 1400px) {
@@ -1179,6 +1187,14 @@ header.scrolled {
     display: none !important;
 }
 
+.carroussel-box-bg.anual-selected .plus-card {
+    background: var(--anual-plus-card) !important;
+}
+
+.carroussel-box-bg.mensal-selected .plus-card {
+    background: var(--mensal-plus-card) !important;
+}
+
 .transform-card {
     box-shadow: 0px 0.9px 2.71px 0px rgba(0, 0, 0, 0.14) !important;
     height: unset !important;
@@ -1194,7 +1210,11 @@ header.scrolled {
 }
 
 .plus-card {
-    background: linear-gradient(180deg, #5095FA 0%, #1D4782 100%) !important;
+    background: var(--anual-plus-card) !important;
+}
+
+.plus-card {
+    background: var(--anual-plus-card) !important;
 }
 
 @media screen and (max-width: 1400px) {
@@ -1210,6 +1230,15 @@ header.scrolled {
         width: 48%;
         min-width: 48%;
         max-width: 48%;
+    }
+
+    .transform-card h3.smaller {
+        font-size: 16px !important;
+    }
+
+    .transform-card h5 {
+        font-size: 12px !important;
+        line-height: 20px !important;
     }
 }
 
@@ -1263,6 +1292,12 @@ header.scrolled {
 
     .custom-carroussel-transform-container {
         gap: 16px;
+    }
+}
+
+@media screen and (max-width: 379px) {
+    .transform-card {
+        padding: 50px 30px;
     }
 }
 

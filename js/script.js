@@ -101,8 +101,10 @@ function initCarrousselTransformEvents() {
         handleBtnClick(true)
     })
 
+
     function handleBtnClick(positive) {
-        const scrollInPixels = getActualCardWidth() + 16;
+        const gapBetween = document.documentElement.clientWidth >= 1200 ? 32 : 16;
+        const scrollInPixels = getActualCardWidth() + gapBetween;
 
         carrousselContainer.scrollBy({
             top: 0,
