@@ -101,6 +101,9 @@ function initCarrousselTransformEvents() {
         handleBtnClick(true)
     })
 
+    if(document.documentElement.offsetWidth + 15 <= 768) {
+      handleBtnClick(true)
+    }
 
     function handleBtnClick(positive) {
         const gapBetween = document.documentElement.clientWidth >= 1200 ? 32 : 16;
